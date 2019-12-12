@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import HookCounterFour from './components/hook04/HookCounterFour';
+// import ClassMouse from './components/hook06/ClassMouse';
+import HookMouse from './components/hook06/HookMouse';
 
 class App extends React.Component {
     render() {
         return (
             <div className="App">
-            	<HookCounterFour />
+                {/* <ClassMouse /> */}
+                <HookMouse />
             </div>
         );
     };
