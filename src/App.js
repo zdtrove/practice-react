@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
+import Home from './Home';
 
-class App extends React.Component {
+export default class App extends React.Component {
     render() {
-        return (
-            <div className="App">
-                React App
-            </div>
-        );
+        return  <div className="App">
+            <h1>shouldComponentUpdate</h1>
+            <Home data="test" />
+        </div>
     };
 }
-
-export default App;
