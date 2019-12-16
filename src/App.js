@@ -1,17 +1,13 @@
 import React from 'react';
 import './App.css';
-// import ClassMouse from './components/hook06/ClassMouse';
-import HookMouse from './components/hook06/HookMouse';
+import ParentComponent from './components/hook13/ParentComponent';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div className="App">
-                {/* <ClassMouse /> */}
-                <HookMouse />
-            </div>
-        );
-    };
+function App() {
+    return (
+        <div className="App">
+        	<ParentComponent />
+        </div>
+    );
 }
 
 export default App;
