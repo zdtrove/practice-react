@@ -1,5 +1,8 @@
 export default {
-	"react": {
-		"text01": "Hello React"
+	login: {
+		login: 'Login'
+	},
+	signup: {
+		signup: 'Signup'
 	}
 }

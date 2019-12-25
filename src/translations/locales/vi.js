@@ -1,5 +1,8 @@
 export default {
-	"react": {
-		"text01": "Xin chào React 01"
+	login: {
+		login: 'Đăng nhập'
+	},
+	signup: {
+		signup: 'Đăng ký'
 	}
 }
