@@ -13,9 +13,6 @@ function Menu() {
 		    <li className="nav-item">
 		      <Link to="/posts" className="nav-link">Posts</Link>
 		    </li>
-		    <li className="nav-item">
-		      <a className="nav-link" href="#">Contact</a>
-		    </li>
 	  	</ul>
 	  	<img onClick={() => changeLanguage('en')} src="assets/imgs/en.png" alt="en" className="mr-1 flagEn" />
 	  	<img onClick={() => changeLanguage('vi')} src="assets/imgs/vi.png" alt="vi" className="flagVi" />

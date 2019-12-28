@@ -1,12 +1,12 @@
 import React from "react";
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from "react-router-dom";
 import Menu from './components/Menu';
 import routes from './router';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import { Provider } from 'react-redux';
 
-import store from './store';
+import store from './redux/store';
 
 class App extends React.Component {
 	render() {
