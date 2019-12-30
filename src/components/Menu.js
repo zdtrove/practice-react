@@ -11,7 +11,7 @@ function Menu() {
 		<Link to="/" className="navbar-brand">Home</Link>
 		<ul className="navbar-nav mr-auto">
 		    <li className="nav-item">
-		      <Link to="/posts" className="nav-link">Posts</Link>
+		      <Link to="/profile" className="nav-link">Profile</Link>
 		    </li>
 	  	</ul>
 	  	<img onClick={() => changeLanguage('en')} src="assets/imgs/en.png" alt="en" className="mr-1 flagEn" />

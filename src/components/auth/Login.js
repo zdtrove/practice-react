@@ -17,6 +17,13 @@ class Login extends React.Component {
 		}
 		this.props.loginProps(formValue);
 	}
+	componentDidMount() {
+	    let isLogin = localStorage.getItem('login');
+		if (isLogin === 'login') {
+			this.props.history.push('profile');
+		}
+	}
+
 	render() {
 		const { t, auth } = this.props;
 	    return <div className="row">
@@ -35,11 +42,9 @@ class Login extends React.Component {
 	}
 }
 
-const LoginTrans = withTranslation()(Login);
-
 const mapStateToProps = state => {
 	return {
-		auth: state.auth
+		auth: state.auth,
 	}
 }
 
@@ -48,5 +53,7 @@ const mapDispatchToProps = dispatch => {
 		loginProps: (loginData) => dispatch(login(loginData))
 	}
 }
+
+const LoginTrans = withTranslation()(Login);
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginTrans);

@@ -2,8 +2,8 @@ import React from 'react';
 import Home from '../components/Home';
 import Login from '../components/auth/Login';
 import Signup from '../components/auth/Signup';
+import Profile from '../components/profile';
 import Notfound from '../components/Notfound';
-import Posts from '../components/Posts';
 import { Switch, Route } from "react-router-dom";
 
 const routes = (
@@ -11,7 +11,7 @@ const routes = (
 		<Route path="/" exact component={Home} />
 		<Route path="/login" component={Login} />
 		<Route path="/signup" component={Signup} />
-		<Route path="/posts" component={Posts} />
+		<Route path="/profile" component={Profile} />
 		<Route component={Notfound} />
     </Switch>
 );

@@ -25,17 +25,52 @@ export const loginFailure = error => {
 }
 
 export const login = (loginData) => {
-	console.log(loginData);
 	return (dispatch) => {
 		dispatch(loginRequest());
 		axios.post(`account/login`, loginData)
 		.then(response => {
 			const login = response.data;
 			dispatch(loginSuccess(login));
+			localStorage.setItem('login', 'login');
 		})
 		.catch(error => {
 			const errorMsg = error.message;
 			dispatch(loginFailure(errorMsg));
+		})
+	}
+}
+
+export const signupRequest = () => {
+	return {
+		type: authTypes.SIGNUP_REQUEST
+	}
+}
+
+export const signupSuccess = users => {
+	return {
+		type: authTypes.SIGNUP_SUCCESS,
+		payload: users,
+	}
+}
+
+export const signupFailure = error => {
+	return {
+		type: authTypes.SIGNUP_FAILURE,
+		payload: error,
+	}
+}
+
+export const signup = (signupData) => {
+	return (dispatch) => {
+		dispatch(signupRequest());
+		axios.post(`account/register`, signupData)
+		.then(response => {
+			const signup = response.data;
+			dispatch(signupSuccess(signup));
+		})
+		.catch(error => {
+			const errorMsg = error.message;
+			dispatch(signupFailure(errorMsg));
 		})
 	}
 }
