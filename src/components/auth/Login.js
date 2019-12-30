@@ -48,9 +48,9 @@ const mapStateToProps = state => {
 	}
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, props) => {
 	return {
-		loginProps: (loginData) => dispatch(login(loginData))
+		loginProps: (loginData) => dispatch(login(loginData, props))
 	}
 }
 

@@ -24,7 +24,7 @@ export const loginFailure = error => {
 	}
 }
 
-export const login = (loginData) => {
+export const login = (loginData, props) => {
 	return (dispatch) => {
 		dispatch(loginRequest());
 		axios.post(`account/login`, loginData)
@@ -32,6 +32,7 @@ export const login = (loginData) => {
 			const login = response.data;
 			dispatch(loginSuccess(login));
 			localStorage.setItem('login', 'login');
+			props.history.push('profile');
 		})
 		.catch(error => {
 			const errorMsg = error.message;
