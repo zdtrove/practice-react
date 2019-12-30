@@ -1,8 +1,9 @@
 export default {
 	login: {
-		login: 'Login'
+		login: 'Login',
+		required: 'Required',
 	},
 	signup: {
-		signup: 'Signup'
-	}
+		signup: 'Signup',
+	},
 }

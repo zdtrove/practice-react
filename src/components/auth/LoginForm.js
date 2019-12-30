@@ -1,9 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import i18n from "i18next";
 
-const required = value => value ? undefined : 'Required';
-const minLength = value => value && value.length < 6 ? `Must be ${6} characters or more` : undefined;
-const email = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
 const renderField = ({
   	input,
   	label,
@@ -17,6 +15,10 @@ const renderField = ({
 	</div>
 );
 
+const required = value => value ? undefined : i18n.t('login.required');
+const minLength = value => value && value.length < 6 ? `Must be ${6} characters or more` : undefined;
+const emailCheck = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
+
 const LoginForm = props => {
   	const { handleSubmit, pristine, reset, invalid, submitting } = props;
   	return (
@@ -25,7 +27,7 @@ const LoginForm = props => {
 				<label>Email address:</label>
 				<Field 
 					component={renderField} 
-					validate={[required, email]}
+					validate={[required, emailCheck]}
 					type="email" 
 					name="email"
 					label="Enter Email"

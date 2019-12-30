@@ -1,8 +1,9 @@
 export default {
 	login: {
-		login: 'Đăng nhập'
+		login: 'Đăng nhập',
+		required: 'Trường bắt buộc',
 	},
 	signup: {
-		signup: 'Đăng ký'
-	}
+		signup: 'Đăng ký',
+	},
 }
