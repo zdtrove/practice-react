@@ -4,8 +4,8 @@ import { ActionButton } from "./ActionButton";
 export class List extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-		names: ["Bob", "Alice", "Dora"]
+			this.state = {
+			names: ["Bob", "Alice", "Dora"]
 		} 
 	}
 
@@ -20,7 +20,7 @@ export class List extends Component {
 			<ActionButton callback={ this.reverseList } text="Reverse Names" />
 			{ 
 				this.state.names.map((name, index) => {
-					return <h5 key={ name }>{ name }</h5>
+					return <h5 id={ name.toLowerCase() } key={ name }>{ name }</h5>
 				})
 			}
 			</div>
