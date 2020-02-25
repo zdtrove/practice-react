@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-// import ContextApi from './context-api';
-// import BookProject from './book-project';
-import ReactRouter from './react-router-redirects';
-// import ReactRouter from './react-router-basic';
-// import ReactRouter from './react-router-url-parameters';
+// import ContextApi from './01-context-api';
+// import BookProject from './02-context-api-book-project';
+import ReactRouter from './05-router-redirects';
+// import ReactRouter from './03-router-basic';
+// import ReactRouter from './06-router-url-parameters';
 
 class App extends Component {
     render() {
