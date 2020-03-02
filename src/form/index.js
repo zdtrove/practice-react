@@ -10,14 +10,21 @@ export default class App extends Component {
 			formData: {},
 		}
 	}
+
+	submitData = newData => {
+		this.setState({
+			formData: newData,
+		});
+	}
+	
 	render() {
 		return <div className="container-fluid">
-			<div className="row p-2">
+			<div className="row">
 				<div className="col-6">
-					<Form />
+					<Form submit={ this.submitData } />
 				</div>
 				<div className="col-6">
-					<FormResult />
+					<FormResult data={ this.state.formData } />
 				</div>
 			</div>
 		</div>
