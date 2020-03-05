@@ -9,13 +9,14 @@ import './App.css';
 // import ReactRouter from './router-404-pages';
 // import ReactRouter from './router-preventing-transitions';
 // import Refs from './refs';
-import Form from './form';
+// import Form from './form';
+import PureComponent from './pure-components';
 
 class App extends Component {
     render() {
         return (
-        	<div>
-            	<Form />
+        	<div className="App">
+            	<PureComponent />
             </div>
     	);
     }
