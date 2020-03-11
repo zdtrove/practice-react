@@ -10,13 +10,16 @@ import './App.css';
 // import ReactRouter from './router-preventing-transitions';
 // import Refs from './refs';
 // import Form from './form';
-import PureComponent from './pure-components';
+// import PureComponent from './pure-components';
+// import Refs02 from './refs-02';
+// import Portals from './portals';
+import LifecycleMethods from './lifecycle-methods';
 
 class App extends Component {
     render() {
         return (
         	<div className="App">
-            	<PureComponent />
+            	<LifecycleMethods />
             </div>
     	);
     }
