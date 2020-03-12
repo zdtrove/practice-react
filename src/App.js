@@ -13,15 +13,15 @@ import './App.css';
 // import PureComponent from './pure-components';
 // import Refs02 from './refs-02';
 // import Portals from './portals';
-// import LifecycleMethods from './lifecycle-methods';
+import LifecycleMethods from './lifecycle-methods';
 // import TicTacToe from './tic-tac-toe';
-import Composition from './composition';
+// import Composition from './composition';
 
 class App extends Component {
     render() {
         return (
         	<div className="App">
-            	<Composition />
+            	<LifecycleMethods />
             </div>
     	);
     }
