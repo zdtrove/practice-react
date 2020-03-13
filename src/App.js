@@ -13,15 +13,17 @@ import './App.css';
 // import PureComponent from './pure-components';
 // import Refs02 from './refs-02';
 // import Portals from './portals';
-import LifecycleMethods from './lifecycle-methods';
+// import LifecycleMethods from './lifecycle-methods';
 // import TicTacToe from './tic-tac-toe';
 // import Composition from './composition';
+// import ErrorBoundaries from './error-boundaries';
+import ContextApi02 from './context-api-02';
 
 class App extends Component {
     render() {
         return (
         	<div className="App">
-            	<LifecycleMethods />
+            	<ContextApi02 />
             </div>
     	);
     }
