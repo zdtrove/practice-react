@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormValidation from './FormValidation';
+import FormProvider02 from './FormProvider02';
 import FormResult from './FormResult';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -19,7 +19,7 @@ export default class Main extends Component {
 		return <div className="container-fluid">
 			<div className="row">
 				<div className="col-6">
-					<FormValidation submit={ this.submitData } />
+					<FormProvider02 submit={ this.submitData } />
 				</div>
 				<div className="col-6">
 					<FormResult data={ this.state.formData } />

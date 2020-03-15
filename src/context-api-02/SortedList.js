@@ -17,13 +17,13 @@ export default class SortedList extends Component {
         this.setState({ sort: !this.state.sort });
     }
     render() {
+        console.log(this.props.proMode);
         return (
             <div>
                 <ErrorBoundary>
                     <GeneralList list={this.getList()} theme="info" />
                     <div className="text-center m-2">
-                        <ActionButton theme="primary" text="Sort"
-                            proMode={this.props.proMode} callback={this.toggleSort} />
+                        <ActionButton theme="primary" text="Sort" callback={this.toggleSort} />
                     </div>
                 </ErrorBoundary>   
             </div>

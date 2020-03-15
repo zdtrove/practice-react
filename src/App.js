@@ -10,6 +10,7 @@ import './App.css';
 // import ReactRouter from './router-preventing-transitions';
 // import Refs from './refs';
 // import Form from './form';
+import Form from './form-validation';
 // import PureComponent from './pure-components';
 // import Refs02 from './refs-02';
 // import Portals from './portals';
@@ -17,13 +18,14 @@ import './App.css';
 // import TicTacToe from './tic-tac-toe';
 // import Composition from './composition';
 // import ErrorBoundaries from './error-boundaries';
-import ContextApi02 from './context-api-02';
+// import ContextApi02 from './context-api-02';
+// import Events from './events';
 
 class App extends Component {
     render() {
         return (
         	<div className="App">
-            	<ContextApi02 />
+            	<Form />
             </div>
     	);
     }
