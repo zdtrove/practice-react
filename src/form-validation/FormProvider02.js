@@ -9,7 +9,7 @@ export default class FormProvider02 extends Component {
 		this.state = {
 			errors: {},
 			dirty: {},
-			formSubmitted: false,
+			formValid: false,
 			getMessagesForField: this.getMessagesForField,
 			data: {
 				name: "",
@@ -34,46 +34,41 @@ export default class FormProvider02 extends Component {
 		return Object.keys(this.state.errors).length === 0;
 	}
 
-	handleChange = (ev) => {
-		let name = ev.target.name;
-		this.setState(state => state.dirty[name] = true);
-	}
-
-	handleClick = (ev) => {
-		this.setState({ formSubmitted: true }, () => {
-			if (this.formValid) {
-				this.props.submit(this.state.data);
-			}
-		});
+	handleClick = () => {
+		if (this.state.formValid) {
+			this.props.submit(this.state.data);
+		}
 	}
 
 	getButtonClasses() {
-		return this.state.formSubmitted && !this.formValid
-			? "btn-danger" : "btn-primary";
+		return this.state.formValid ? "btn-primary" : "btn-danger";
 	}
 
 	getMessagesForField = field => {
-		return (this.state.formSubmitted || this.state.dirty[field]) 
-			? this.state.errors[field] || [] : [];
+		return this.state.dirty[field] ? this.state.errors[field] || [] : [];
 	}
 
 	updateFormValue = event => {
-		event.persist();
-		this.setState(state => {
-			state.data[event.target.name] = event.target.value
+		let name = event.target.name;
+		let value = event.target.value;
+		this.setState(state => state.dirty[name] = true);
+		this.setState(state => { 
+			state.data[name] = value; 
+		}, () => {
+			if (Object.keys(this.state.errors).length === 0) {
+				this.setState({formValid: true});
+			}
 		});
 	}
 
 	render() {
 		return <>
 			<FormContext.Provider value={ this.state }>
-				<div onChange={ this.handleChange }>
-					<Form02 data={this.state.data} rules={this.state.rules} submit={this.state.data} updateFormValue={this.updateFormValue} />
-				</div>
+				<Form02 data={this.state.data} updateFormValue={this.updateFormValue} />
 			</FormContext.Provider>
 			<div className="text-center">
 				<button className={`btn ${this.getButtonClasses()}`} onClick={this.handleClick}
-					disabled={this.state.formSubmitted && !this.formValid}>
+					disabled={!this.state.formValid}>
 					Submit
 				</button>
 			</div>

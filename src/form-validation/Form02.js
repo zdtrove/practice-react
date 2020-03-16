@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ErrorMessages } from "./ErrorMessages";
 export default class Form extends Component {
 	render() {
-		console.log(this.props);
 		return <div className="h5 bg-info text-white p-2">
 			<div className="form-group">
 				<label>Name</label>
