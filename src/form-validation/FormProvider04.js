@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { FormValidation } from "./FormValidation";
-import { FormContext } from './FormContext';
-import Form02 from './Form02';
 
-export default class FormProvider02 extends Component {
+export const FormContext = React.createContext();
+
+export default class FormProvider04 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			errors: {},
 			dirty: {},
 			formValid: false,
-			getMessagesForField: this.getMessagesForField,
-			updateFormValue: this.updateFormValue,
 			data: {
 				name: "",
 				email: "",
@@ -55,10 +53,13 @@ export default class FormProvider02 extends Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return <>
-			<FormContext.Provider value={{...this.state}}>
-				<Form02 />
+			<FormContext.Provider value={{
+				...this.state, 
+				updateFormValue: this.updateFormValue, 
+				getMessagesForField: this.getMessagesForField,
+			}}>
+				{this.props.children}
 			</FormContext.Provider>
 			<div className="text-center">
 				<button className={`btn ${this.getButtonClasses()}`} onClick={this.handleClick}

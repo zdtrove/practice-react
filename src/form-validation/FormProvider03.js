@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { FormValidation } from "./FormValidation";
 import { FormContext } from './FormContext';
-import Form02 from './Form02';
+import { ErrorMessages } from "./ErrorMessages";
 
-export default class FormProvider02 extends Component {
+export default class FormProvider03 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -11,7 +11,6 @@ export default class FormProvider02 extends Component {
 			dirty: {},
 			formValid: false,
 			getMessagesForField: this.getMessagesForField,
-			updateFormValue: this.updateFormValue,
 			data: {
 				name: "",
 				email: "",
@@ -57,8 +56,27 @@ export default class FormProvider02 extends Component {
 	render() {
 		console.log(this.state);
 		return <>
-			<FormContext.Provider value={{...this.state}}>
-				<Form02 />
+			<FormContext.Provider value={ this.state }>
+				<div className="h5 bg-info text-white p-2">
+					<div className="form-group">
+						<label>Name</label>
+						<input className="form-control" name="name" value={this.state.data.name}
+							onChange={this.updateFormValue} />
+						<ErrorMessages field="name" />
+					</div>
+					<div className="form-group">
+						<label>Email</label>
+						<input className="form-control" name="email" value={this.state.data.email}
+							onChange={this.updateFormValue} />
+						<ErrorMessages field="email" />
+					</div>
+					<div className="form-group">
+						<label>Order</label>
+						<textarea className="form-control" name="order" value={this.state.data.order}
+							onChange={this.updateFormValue} />
+						<ErrorMessages field="order" />
+					</div>
+				</div>
 			</FormContext.Provider>
 			<div className="text-center">
 				<button className={`btn ${this.getButtonClasses()}`} onClick={this.handleClick}
