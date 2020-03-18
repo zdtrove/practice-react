@@ -10,7 +10,7 @@ import './App.css';
 // import ReactRouter from './router-preventing-transitions';
 // import Refs from './refs';
 // import Form from './form';
-import Form from './form-validation';
+// import Form from './form-validation';
 // import PureComponent from './pure-components';
 // import Refs02 from './refs-02';
 // import Portals from './portals';
@@ -20,12 +20,13 @@ import Form from './form-validation';
 // import ErrorBoundaries from './error-boundaries';
 // import ContextApi02 from './context-api-02';
 // import Events from './events';
+import HigherOrderComponents from './higher-order-components';
 
 class App extends Component {
     render() {
         return (
         	<div className="App">
-            	<Form />
+            	<HigherOrderComponents />
             </div>
     	);
     }
