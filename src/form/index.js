@@ -1,32 +1,13 @@
 import React, { Component } from 'react';
-import Form from './Form';
-import FormResult from './FormResult';
-import 'bootstrap/dist/css/bootstrap.css';
+// import FormBasic from './form-basic';
+import FormValidation from './form-validation';
 
-export default class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			formData: {},
-		}
-	}
-
-	submitData = newData => {
-		this.setState({
-			formData: newData,
-		});
-	}
-	
-	render() {
-		return <div className="container-fluid">
-			<div className="row">
-				<div className="col-6">
-					<Form submit={ this.submitData } />
-				</div>
-				<div className="col-6">
-					<FormResult data={ this.state.formData } />
-				</div>
-			</div>
-		</div>
-	}
-} 
+export default class Main extends Component {
+    render() {
+        return (
+            <div>
+                <FormValidation />
+            </div>
+        )
+    }
+}

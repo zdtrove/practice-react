@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import ClickCounter from './ClickCounter';
-import HoverCounter from './HoverCounter';
+import Main from './HOC-01';
 
-export default class Main extends Component {
-	render() {
-		return (
-			<div>
-				<ClickCounter />
-				<HoverCounter />
-			</div>
-		) 
-	}
+export default class index extends Component {
+    render() {
+        return (
+            <div>
+                <Main />
+            </div>
+        )
+    }
 }
