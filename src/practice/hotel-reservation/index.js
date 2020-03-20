@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.css';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
@@ -6,10 +6,11 @@ import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import {RoomProvider} from './context';
 
-export default class index extends Component {
-    render() {
-        return <>
+export default function Main() {
+    return <>
+        <RoomProvider>
             <Router>
                 <Navbar />
                 <Switch>
@@ -19,6 +20,6 @@ export default class index extends Component {
                     <Route component={Error} />
                 </Switch>
             </Router> 
-        </>
-    }
+        </RoomProvider>
+    </>
 }
