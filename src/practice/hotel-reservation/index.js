@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import {RoomProvider} from './context';
 
-export default function Main() {
+export default function HotelReservation() {
     return <>
         <RoomProvider>
             <Router>
