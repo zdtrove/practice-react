@@ -62,7 +62,7 @@ class RoomProvider extends Component {
             tempRoom = tempRoom.filter(room => room.breakfast === true);
         }
         if (pets) {
-            tempRoom = tempRoom.filter(room => room.pets === pets);
+            tempRoom = tempRoom.filter(room => room.pets === true);
         }
         this.setState({
             sortedRoom: tempRoom,
