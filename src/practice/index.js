@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 // import PhoneEcommerce from './phone-ecommerce';
 // import ComputerEcommerce from './computer-ecommerce';
 // import TechStore from './tech-store';
-import HotelReservationPractice from './hotel-reservation-practice';
+import PracticeSummary from './practice-summary';
 
 export default class Main extends Component {
     render() {
         return (
-            <HotelReservationPractice />
+            <PracticeSummary />
         );
     }
 }
