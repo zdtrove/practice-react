@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import dataSearchHotel from '../data/SearchHotel';
 
-const RoomContext = React.createContext();
+const SearchHotelContext = React.createContext();
 
-class RoomProvider extends Component {
+class SearchHotelProvider extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -84,16 +84,16 @@ class RoomProvider extends Component {
     }
     
     render() {
-        return <RoomContext.Provider value={{
+        return <SearchHotelContext.Provider value={{
             ...this.state,
             handleChange: this.handleChange,
         }}>
             {this.props.children}
-        </RoomContext.Provider>
+        </SearchHotelContext.Provider>
     }
 }
 
 export {
-    RoomContext,
-    RoomProvider,
+    SearchHotelContext,
+    SearchHotelProvider,
 };
