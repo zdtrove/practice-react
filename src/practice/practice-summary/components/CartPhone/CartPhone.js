@@ -4,8 +4,7 @@ import Phone from './Phone';
 import { CartPhoneContext } from '../../context/CartPhoneContext';
 
 export default function CartPhone() {
-    const {phones, cart} = React.useContext(CartPhoneContext);
-    console.log(cart);
+    const {phones, cart, addToCart} = React.useContext(CartPhoneContext);
     return <div className="container-fluid">
         <div className="row p-2 justify-content-center">
             <Link to="/" className="btn btn-primary">Back to Home</Link>
@@ -20,7 +19,9 @@ export default function CartPhone() {
                     </div>
                 </div>
                 <div className="row">
-                    {phones.map(phone => <Phone key={phone.id} phone={phone} />)}
+                    {phones.map(phone => 
+                        <Phone key={phone.id} phone={phone} addToCart={addToCart} cart={cart} />
+                    )}
                 </div>
             </div>
         </section>

@@ -27,7 +27,7 @@
 
 .btn-black:hover {
     background: var(--mainDark) !important;
-    color: var(--mainWhite) !important;
+    color: var(--mainDark) !important;
 }
 
 .cart-icon {
