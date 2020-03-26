@@ -31,7 +31,7 @@ export default function RoomFilter(props) {
     );
     return <section className="filter-container">
         <div className="section-title">
-            <h4>search rooms</h4>
+            <h4>search hotel</h4>
             <div></div>
         </div>
         <form className="filter-form">

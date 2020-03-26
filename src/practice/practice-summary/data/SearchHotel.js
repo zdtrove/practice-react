@@ -1,19 +1,19 @@
-import room1 from "../images/search-hotel/details-1.jpeg";
-import room2 from "../images/search-hotel/details-2.jpeg";
-import room3 from "../images/search-hotel/details-3.jpeg";
-import room4 from "../images/search-hotel/details-4.jpeg";
-import img1 from "../images/search-hotel/room-1.jpeg";
-import img2 from "../images/search-hotel/room-2.jpeg";
-import img3 from "../images/search-hotel/room-3.jpeg";
-import img4 from "../images/search-hotel/room-4.jpeg";
-import img5 from "../images/search-hotel/room-5.jpeg";
-import img6 from "../images/search-hotel/room-6.jpeg";
-import img7 from "../images/search-hotel/room-7.jpeg";
-import img8 from "../images/search-hotel/room-8.jpeg";
-import img9 from "../images/search-hotel/room-9.jpeg";
-import img10 from "../images/search-hotel/room-10.jpeg";
-import img11 from "../images/search-hotel/room-11.jpeg";
-import img12 from "../images/search-hotel/room-12.jpeg";
+import room1 from "../images/SearchHotel/details-1.jpeg";
+import room2 from "../images/SearchHotel/details-2.jpeg";
+import room3 from "../images/SearchHotel/details-3.jpeg";
+import room4 from "../images/SearchHotel/details-4.jpeg";
+import img1 from "../images/SearchHotel/room-1.jpeg";
+import img2 from "../images/SearchHotel/room-2.jpeg";
+import img3 from "../images/SearchHotel/room-3.jpeg";
+import img4 from "../images/SearchHotel/room-4.jpeg";
+import img5 from "../images/SearchHotel/room-5.jpeg";
+import img6 from "../images/SearchHotel/room-6.jpeg";
+import img7 from "../images/SearchHotel/room-7.jpeg";
+import img8 from "../images/SearchHotel/room-8.jpeg";
+import img9 from "../images/SearchHotel/room-9.jpeg";
+import img10 from "../images/SearchHotel/room-10.jpeg";
+import img11 from "../images/SearchHotel/room-11.jpeg";
+import img12 from "../images/SearchHotel/room-12.jpeg";
 
 export default [
     {

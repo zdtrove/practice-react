@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import {RoomProvider} from './context';
-import SearchHotel from './pages/SearchHotel';
-import Home from './pages/Home';
-import Error from './pages/Error';
+import {RoomProvider} from './context/SearchHotelContext';
+import SearchHotel from './components/SearchHotel/SearchHotel';
+import Home from './components/Home';
+import Error from './components/Error';
 import "bootstrap/dist/css/bootstrap.css";
-import "./css/search-hotel.css";
+import "./css/SearchHotel.css";
 
 export default function Main() {
 	return <RoomProvider>

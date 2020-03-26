@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingGif from '../../images/search-hotel/gif/loading-arrow.gif';
+import loadingGif from '../../images/SearchHotel/gif/loading-arrow.gif';
 
 export default function Loading() {
     return (
