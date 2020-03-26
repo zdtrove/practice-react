@@ -1,17 +1,13 @@
-/* 
-https://www.iconfinder.com/icons/1243689/call_phone_icon
-Creative Commons (Attribution 3.0 Unported);
-https://www.iconfinder.com/Makoto_msk */
-import product1 from "./images/product-1.png";
-import product2 from "./images/product-2.png";
-import product3 from "./images/product-3.png";
-import product4 from "./images/product-4.png";
-import product5 from "./images/product-5.png";
-import product6 from "./images/product-6.png";
-import product7 from "./images/product-7.png";
-import product8 from "./images/product-8.png";
+import product1 from "../images/CartPhone/product-1.png";
+import product2 from "../images/CartPhone/product-2.png";
+import product3 from "../images/CartPhone/product-3.png";
+import product4 from "../images/CartPhone/product-4.png";
+import product5 from "../images/CartPhone/product-5.png";
+import product6 from "../images/CartPhone/product-6.png";
+import product7 from "../images/CartPhone/product-7.png";
+import product8 from "../images/CartPhone/product-8.png";
 
-export const storeProducts = [
+export default [
     {
         id: 1,
         title: "Google Pixel - Black",
@@ -109,16 +105,3 @@ export const storeProducts = [
         total: 0
     }
 ];
-
-export const detailProduct = {
-    id: 1,
-    title: "Google Pixel - Black",
-    img: product1,
-    price: 10,
-    company: "google",
-    info:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
-    inCart: false,
-    count: 0,
-    total: 0
-};

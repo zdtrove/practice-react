@@ -69,7 +69,7 @@ class SearchHotelProvider extends Component {
         });
     }
 
-    componentDidMount() {
+    getData = () => {
         let rooms = this.formatData(dataSearchHotel);
         let maxPrice = Math.max(...rooms.map(item => item.price));
         let maxSize = Math.max(...rooms.map(item => item.size));
@@ -81,6 +81,10 @@ class SearchHotelProvider extends Component {
             maxPrice,
             maxSize,
         });
+    }
+
+    componentDidMount() {
+        this.getData();
     }
     
     render() {
