@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import {SearchHotelProvider} from './context/SearchHotelContext';
-import SearchHotel from './components/SearchHotel/SearchHotel';
-import Home from './components/Home';
-import Error from './components/Error';
+import SearchHotel from './pages/SearchHotel';
+import CartPhone from './pages/CartPhone';
+import Home from './pages/Home';
+import Error from './pages/Error';
 import "bootstrap/dist/css/bootstrap.css";
 import "./css/SearchHotel.css";
 
@@ -11,9 +11,8 @@ export default function Main() {
 	return <Router>
 		<Switch>
 			<Route exact path="/" component={Home} />
-			<SearchHotelProvider>
-				<Route path="/search-hotel" component={SearchHotel} />
-			</SearchHotelProvider>
+			<Route path="/search-hotel" component={SearchHotel} />
+			<Route path="/cart-phone" component={CartPhone} />
 			<Route component={Error} />
 		</Switch>
 	</Router>

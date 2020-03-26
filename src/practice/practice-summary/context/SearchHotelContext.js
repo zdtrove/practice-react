@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import dataSearchHotel from '../data/SearchHotel';
+import dataSearchHotel from '../data/SearchHotelData';
 
 const SearchHotelContext = React.createContext();
 
