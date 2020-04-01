@@ -1,57 +1,32 @@
 import React from 'react';
 import './App.css';
-import Child from './components/child';
+import Counter from './components/counter';
 
 class App extends React.Component {
-
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            name: 'john'
-        };
-        console.log('constructor');
-    }
-
-    UNSAFE_componentWillMount() {
-        if (window.innerWidth < 500) {
-            this.setState({
-                innerWidth: window.innerWidth
-            });
+            mount: true,
+            ignoreProp: 0,
+            seed: 40
         }
-        console.log('componentWillMount');
+        this.mountCounter = () => this.setState({mount: true});
+        this.unmountCounter = () => this.setState({mount: false});
+        this.ignoreProp = () => this.setState({ignoreProp: Math.random()});
+        this.seedGenerator = () => this.setState({seed: Number.parseInt(Math.random() * 100)});
     }
-
-    componentDidMount() {
-        console.log('componentDidMount');
-    }
-
-    UNSAFE_componentWillReceiveProps() {
-        console.log('componentWillReceiveProps');
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
-        return true;
-    }
-
-    UNSAFE_componentWillUpdate() {
-        console.log('componentWillUpdate');
-    }
-
-    changeState = () => {
-        this.setState({name: 'Sara'});
-    }
-    
     render() {
-        console.log('render');
         return (
             <div className="App">
-                name: {this.state.name}
+                <button onClick={this.mountCounter} disabled={this.state.mount}>Mount Counter</button>{' '}
+                <button onClick={this.unmountCounter} disabled={!this.state.mount}>Unmount Counter</button>{' '}
+                <button onClick={this.ignoreProp}>Ignore Prop</button>
+                <button onClick={this.seedGenerator}>Generate Seed</button>
                 <hr />
-                innerWidth: {this.state.innerWidth}
-                <hr />
-                <Child name={this.state.name} />
-                <button onClick={this.changeState}>Change State</button>
+                {this.state.mount ? <Counter 
+                    ignoreProp={this.state.ignoreProp} 
+                    seed={this.state.seed}
+                /> : null}
             </div>
         );
     };
